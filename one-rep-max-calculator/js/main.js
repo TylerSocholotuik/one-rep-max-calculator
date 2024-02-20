@@ -12,7 +12,10 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (isFormValid(weight.value, reps.value, rpe.value)) {
-        oneRepMaxElement.innerText = calculateOneRepMax(weight.value, reps.value, rpe.value);
+        let oneRepMax = calculateOneRepMax(weight.value, reps.value, rpe.value);
+        oneRepMaxElement.innerText = oneRepMax;
+
+        populateTable(oneRepMax);
 
         weight.focus();
     }
@@ -21,8 +24,11 @@ form.addEventListener('submit', (e) => {
 form.addEventListener('reset', (e) => {
     form.reset();
     oneRepMaxElement.innerText = '';
+    clearTable();
     weight.focus();
 })
+
+// --------------------- functions ------------------------ //
 
 const isWeightValid = (weightValue) => {
     if (weightValue > 0 && weightValue <= 2000) {
@@ -116,4 +122,28 @@ const calculateWeightUsingOneRepMax = (oneRepMax) => {
     return weightArray;
 }
 
-console.table(calculateWeightUsingOneRepMax(440));
+const populateTable = (oneRepMax) => {
+    let weightArray = calculateWeightUsingOneRepMax(oneRepMax);
+    let tableDataElement;
+
+    for (rpeIndex = 0; rpeIndex < 9; rpeIndex++) {
+        for (repsIndex = 1; repsIndex <= 10; repsIndex++) {
+            // selecting the <td> element for each index in the weightArray using the unique id's
+            tableDataElement = document.getElementById(`rpe-${rpeIndex}-reps-${repsIndex}`);
+            // adding the weight at the corresponding indexes to the <td> elements
+            tableDataElement.innerText = weightArray[rpeIndex][repsIndex - 1];
+        }
+    }
+}
+
+const clearTable = () => {
+
+    let tableDataElement;
+
+    for (rpeIndex = 0; rpeIndex < 9; rpeIndex++) {
+        for (repsIndex = 1; repsIndex <= 10; repsIndex++) {
+            tableDataElement = document.getElementById(`rpe-${rpeIndex}-reps-${repsIndex}`);
+            tableDataElement.innerText = '';
+        }
+    }
+}
