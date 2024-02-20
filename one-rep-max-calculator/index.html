@@ -104,7 +104,17 @@
     </form>
 
     <p class="fs-5 mt-5">Your estimated 1-rep max is:</p>
-    <p class="fs-1 mt-3 text-info font-weight-bold" id="one-rep-max"></p>
+
+    <div class="row align-items-center justify-content-center">
+      <div class="col-auto">
+        <p class="fs-1 mt-3 text-info" id="one-rep-max">
+
+        </p>
+      </div>
+      <div class="col-auto">
+        <button type="button" class="btn btn-sm btn-primary d-none" id="convert-btn">lbs / kg</button>
+            </div>
+      </div>
 
     <!-- The id's of the td elements are used for the populateTable() function.
          The rpe number is not the actual rpe value, but the index of that rpe in the weightArray (saved complex math) -->

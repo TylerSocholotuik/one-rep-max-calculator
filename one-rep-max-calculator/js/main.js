@@ -3,8 +3,12 @@ const weight = document.getElementById('weight');
 const lbs = document.getElementById('unit-lbs');
 const kg = document.getElementById('unit-kg');
 const reps = document.getElementById('reps');
-const RPE = document.getElementById('rpe');
+const rpe = document.getElementById('rpe');
 const oneRepMaxElement = document.getElementById('one-rep-max');
+const convertBtn = document.getElementById('convert-btn');
+let oneRepMax;
+let weightUnit;
+let unitClickCount = 0;
 
 weight.focus();
 
@@ -12,29 +16,37 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (isFormValid(weight.value, reps.value, rpe.value)) {
-        let oneRepMax = calculateOneRepMax(weight.value, reps.value, rpe.value);
-        let weightUnit;
+        oneRepMax = calculateOneRepMax(weight.value, reps.value, rpe.value);
 
-        if (lbs.checked) {
-            weightUnit = 'lbs'
-        } else {
-            weightUnit = 'kg'
-        }
+        weightUnit = lbs.checked ? 'lbs' : 'kg';
         
         oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
 
         populateTable(oneRepMax);
 
+        // showing the unit conversion button when there is data
+        convertBtn.classList.remove('d-none');
+
         weight.focus();
+
+        // resetting the click count of the unit conversion button
+        unitClickCount = 0;
     }
-})
+});
 
 form.addEventListener('reset', (e) => {
     form.reset();
     oneRepMaxElement.innerText = '';
     clearTable();
+    // hiding the unit conversion button when there is no data
+    convertBtn.classList.add('d-none');
     weight.focus();
-})
+    unitClickCount = 0;
+});
+
+
+
+convertBtn.addEventListener('click', toggleUnitConversion);
 
 // --------------------- functions ------------------------ //
 
@@ -153,5 +165,27 @@ const clearTable = () => {
             tableDataElement = document.getElementById(`rpe-${rpeIndex}-reps-${repsIndex}`);
             tableDataElement.innerText = '';
         }
+    }
+}
+
+function toggleUnitConversion() {
+    // tracking the number of times the button has been clicked to create a toggle function. This gets reset when new values are submitted or the form is cleared.
+    unitClickCount++;
+    // setting the conversion rate based on the current weight unit
+    let conversion = weightUnit === 'lbs' ? 0.453592 : 2.20462; 
+    // switching the weight unit
+    weightUnit = weightUnit === 'lbs' ? 'kg' : 'lbs';
+    // recalculating oneRepMax with conversion rate, then outputting new value and re-populating table with converted values
+    // on first and odd numbered clicks, apply the conversion rate, on even numbered clicks, go back to the original weight unit
+    if (unitClickCount % 2 !== 0) {
+        oneRepMax = Math.round(calculateOneRepMax(weight.value * conversion, reps.value, rpe.value));
+        oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
+        populateTable(oneRepMax);
+        console.log(oneRepMax)
+        console.log(conversion);
+    } else {
+        oneRepMax = Math.round(calculateOneRepMax(weight.value, reps.value, rpe.value));
+        oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
+        populateTable(oneRepMax);
     }
 }
