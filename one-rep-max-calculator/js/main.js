@@ -1,3 +1,5 @@
+// ---------------- global variables ----------------//
+
 const form = document.getElementById('calculator-form');
 const weight = document.getElementById('weight');
 const lbs = document.getElementById('unit-lbs');
@@ -10,7 +12,15 @@ let oneRepMax;
 let weightUnit;
 let unitClickCount = 0;
 
+// enabling bootstrap tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
 weight.focus();
+
+// ----------- event listeners ----------------- //
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -189,3 +199,5 @@ function toggleUnitConversion() {
         populateTable(oneRepMax);
     }
 }
+
+
