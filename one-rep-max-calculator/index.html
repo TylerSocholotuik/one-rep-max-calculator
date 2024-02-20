@@ -16,8 +16,8 @@
 <body class="text-center">
   <header class="p-4 bg-black">
     <div class="container d-md-flex justify-content-between align-items-center">
-      <h1 class="mb-4 mb-md-0">
-        <a href="#" class="text-decoration-none text-light d-flex flex-column flex-lg-row gap-lg-3 align-items-center">
+      <a href="#" class="text-decoration-none text-light">
+        <div class="d-flex flex-column align-items-center">
           <svg fill="#FFFFFF" height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475.87 475.87" xml:space="preserve" stroke="#FFFFFF"
             transform="rotate(0)">
@@ -29,9 +29,13 @@
               </path>
             </g>
           </svg>
-          oneRepMax Calculator
-        </a>
-      </h1>
+          <h1>
+            oneRepMax Calculator
+          </h1>
+        </div>
+        <p class="fs-6 text-secondary">Taking the guesswork out of training</p>
+      </a>
+
       <nav>
         <ul class="nav justify-content-center">
           <li class="nav-item">
@@ -53,14 +57,14 @@
       <fieldset class="container">
 
         <div class="row align-items-center">
-          <div class="col">
-              <div class="form-floating">
-                <input type="number" class="form-control" placeholder="Weight" id="weight">
-                <label for="weight" class="form-label">Weight</label>
-                <div class="invalid-feedback" id="weight-feedback">
-                  Weight must be between 1 and 2000.
-                </div>
+          <div class="col-4 col-md-6">
+            <div class="form-floating">
+              <input type="number" class="form-control" placeholder="Weight" id="weight">
+              <label for="weight" class="form-label">Weight</label>
+              <div class="invalid-feedback" id="weight-feedback">
+                Weight must be between 1 and 2000.
               </div>
+            </div>
           </div>
 
           <div class="col col-md-2 col-lg-1">
@@ -92,13 +96,13 @@
             </div>
           </div>
 
-          <div class="col-lg">
+          <div class="col-lg-auto">
             <button type="submit" class="btn btn-lg btn-primary mt-5 mt-lg-0" id="calculate-btn">Calculate</button>
           </div>
         </div>
 
         <button type="reset" class="btn btn-md btn-danger mt-5" id="reset-btn">Clear</button>
-         </div>
+        </div>
 
       </fieldset>
     </form>
@@ -113,8 +117,8 @@
       </div>
       <div class="col-auto">
         <button type="button" class="btn btn-sm btn-primary d-none" id="convert-btn">lbs / kg</button>
-            </div>
       </div>
+    </div>
 
     <!-- The id's of the td elements are used for the populateTable() function.
          The rpe number is not the actual rpe value, but the index of that rpe in the weightArray (saved complex math) -->
@@ -256,7 +260,7 @@
         </tbody>
       </table>
     </div>
-    
+
   </main>
 </body>
 
