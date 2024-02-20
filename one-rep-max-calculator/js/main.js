@@ -16,13 +16,12 @@ form.addEventListener('submit', (e) => {
 
         weight.focus();
     }
-
 })
 
 form.addEventListener('reset', (e) => {
     form.reset();
-
     oneRepMaxElement.innerText = '';
+    weight.focus();
 })
 
 const isWeightValid = (weightValue) => {
