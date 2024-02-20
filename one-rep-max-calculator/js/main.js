@@ -18,8 +18,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 });
 
-weight.focus();
-
 // ----------- event listeners ----------------- //
 
 form.addEventListener('submit', (e) => {
@@ -37,8 +35,6 @@ form.addEventListener('submit', (e) => {
         // showing the unit conversion button when there is data
         convertBtn.classList.remove('d-none');
 
-        weight.focus();
-
         // resetting the click count of the unit conversion button
         unitClickCount = 0;
     }
@@ -50,7 +46,6 @@ form.addEventListener('reset', (e) => {
     clearTable();
     // hiding the unit conversion button when there is no data
     convertBtn.classList.add('d-none');
-    weight.focus();
     unitClickCount = 0;
 });
 
