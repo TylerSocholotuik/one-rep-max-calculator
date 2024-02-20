@@ -1,3 +1,72 @@
+const form = document.getElementById('calculator-form');
+const weight = document.getElementById('weight');
+const lbs = document.getElementById('unit-lbs');
+const kg = document.getElementById('unit-kg');
+const reps = document.getElementById('reps');
+const RPE = document.getElementById('rpe');
+const oneRepMaxElement = document.getElementById('one-rep-max');
+
+weight.focus();
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (isFormValid(weight.value, reps.value, rpe.value)) {
+        oneRepMaxElement.innerText = calculateOneRepMax(weight.value, reps.value, rpe.value);
+
+        weight.focus();
+    }
+
+})
+
+form.addEventListener('reset', (e) => {
+    form.reset();
+
+    oneRepMaxElement.innerText = '';
+})
+
+const isWeightValid = (weightValue) => {
+    if (weightValue > 0 && weightValue <= 2000) {
+        weight.classList.remove('is-invalid');
+        return true;
+    } else {
+        weight.classList.add('is-invalid');
+        return false;
+    }
+}
+
+const isRepsValid = (repsValue) => {
+    if (repsValue > 0 && repsValue <= 10) {
+        reps.classList.remove('is-invalid');
+        return true;
+    } else {
+        reps.classList.add('is-invalid');
+        return false;
+    }
+}
+
+const isRpeValid = (rpeValue) => {
+    if (rpeValue >= 6 && rpeValue <= 10) {
+        rpe.classList.remove('is-invalid');
+        return true;
+    } else {
+        rpe.classList.add('is-invalid');
+        return false;
+    }
+}
+
+const isFormValid = (weightValue, repsValue, rpeValue) => {
+    let validWeight = isWeightValid(weightValue);
+    let validReps =  isRepsValid(repsValue);
+    let validRPE = isRpeValid(rpeValue);
+
+    if (validWeight && validReps && validRPE) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // rows start from RPE 6 and go up to RPE 10 in 0.5 steps
 // cols start from 1 rep and go up to 10 reps
 // values are percentages used in 1RM calculation
@@ -17,7 +86,8 @@ const calculateOneRepMax = (weight, reps, rpe) => {
     // (2 * rpe) - 12 will return the corresponding index in percentage array
     // e.g. (2 * 6) - 12 = 0
     // reps - 1 because reps start at 1
-    return (weight * 100) / percentageArray[(2 * rpe) -12][reps - 1];
+    let oneRepMax = (weight * 100) / percentageArray[(2 * rpe) -12][reps - 1];
+    return Math.round(oneRepMax);
 }
 
 const calculateWeightUsingOneRepMax = (oneRepMax) => {

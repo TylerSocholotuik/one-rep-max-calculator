@@ -49,7 +49,7 @@
   </header>
 
   <main class="px-3 py-5">
-    <form>
+    <form id="calculator-form">
       <fieldset>
 
         <div class="row">
@@ -62,8 +62,11 @@
                 <label class="btn btn-outline-primary" for="unit-kg">kg</label>
               </div>
               <div class="form-floating">
-                <input type="number" class="form-control" placeholder="Weight" id="weight" min="1" max="2000">
+                <input type="number" class="form-control" placeholder="Weight" id="weight">
                 <label for="weight" class="form-label">Weight</label>
+                <div class="invalid-feedback" id="weight-feedback">
+                  Weight must be between 1 and 2000.
+                </div>
               </div>
             </div>
           </div>
@@ -75,8 +78,11 @@
 
           <div class="col">
             <div class="form-floating">
-              <input type="number" class="form-control" placeholder="Reps" id="reps" min="1" max="10">
+              <input type="number" class="form-control" placeholder="Reps" id="reps">
               <label for="reps" class="form-label">Reps</label>
+              <div class="invalid-feedback" id="reps-feedback">
+                Reps must be between 1 and 10.
+              </div>
             </div>
           </div>
 
@@ -86,17 +92,29 @@
 
           <div class="col">
             <div class="form-floating">
-              <input type="number" class="form-control" placeholder="RPE" id="rpe" min="6" max="10">
+              <input type="number" class="form-control" placeholder="RPE" id="rpe">
               <label for="reps" class="form-label">RPE</label>
+              <div class="invalid-feedback" id="rpe-feedback">
+                RPE must be between 6 and 10.
+              </div>
             </div>
           </div>
 
+          <div class="col-lg">
+            <button type="submit" class="btn btn-lg btn-primary mt-5 mt-lg-0" id="calculate-btn">Calculate</button>
+          </div>
         </div>
 
-        <button type="submit" class="btn btn-lg btn-primary mt-5" id="calculate-btn">Calculate</button>
+        <button type="reset" class="btn btn-md btn-danger mt-5 mt-lg-0" id="reset-btn">Clear</button>
+         </div>
 
       </fieldset>
     </form>
+
+    <p class="fs-5 mt-5">Your estimated 1-rep max is:</p>
+    <p class="fs-1 mt-3 text-primary font-weight-bold" id="one-rep-max"></p>
+
+
   </main>
 </body>
 
