@@ -18,6 +18,8 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 });
 
+
+
 // ----------- event listeners ----------------- //
 
 form.addEventListener('submit', (e) => {

@@ -19,9 +19,9 @@
     <script src="js/main.js" defer></script>
 </head>
 
-<body class="text-center">
-    <header class="p-4 bg-black">
-        <div class="container d-md-flex justify-content-between align-items-center">
+<body class="text-center bg-gradient">
+    <header class="p-4 bg-black bg-gradient">
+        <div class="container d-md-flex justify-content-between align-items-end">
             <a href="#" class="text-decoration-none text-light">
                 <div class="d-flex flex-column align-items-center">
                     <svg fill="#FFFFFF" height="100px" width="100px" version="1.1" id="Capa_1"
@@ -43,15 +43,15 @@
             </a>
 
             <nav>
-                <ul class="nav justify-content-center">
+                <ul class="nav nav-tabs gap-lg-5 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link link-light" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Calculator</a>
+                        <a class="nav-link link-light active" aria-current="page" href="#">Calculator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-rpe.html">About RPE</a>
+                        <a class="nav-link link-light" href="about-rpe.html">About RPE</a>
                     </li>
                 </ul>
             </nav>
@@ -60,7 +60,7 @@
 
     <main class="px-3 py-5">
 
-        <h2 class="mb-5">Calculator</h2>
+        <h2 class="mb-5 fw-normal">Calculator</h2>
 
         <form id="calculator-form">
             <fieldset class="container">
@@ -81,9 +81,9 @@
                         <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check" name="weight-unit" id="unit-lbs" 
                                 checked>
-                            <label class="btn btn-outline-primary" for="unit-lbs">lbs</label>
+                            <label class="btn btn-outline-light" for="unit-lbs">lbs</label>
                             <input type="radio" class="btn-check" name="weight-unit" id="unit-kg">
-                            <label class="btn btn-outline-primary" for="unit-kg">kg</label>
+                            <label class="btn btn-outline-light" for="unit-kg">kg</label>
                         </div>
                     </div>
 
