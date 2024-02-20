@@ -13,7 +13,15 @@ form.addEventListener('submit', (e) => {
 
     if (isFormValid(weight.value, reps.value, rpe.value)) {
         let oneRepMax = calculateOneRepMax(weight.value, reps.value, rpe.value);
-        oneRepMaxElement.innerText = oneRepMax;
+        let weightUnit;
+
+        if (lbs.checked) {
+            weightUnit = 'lbs'
+        } else {
+            weightUnit = 'kg'
+        }
+        
+        oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
 
         populateTable(oneRepMax);
 
