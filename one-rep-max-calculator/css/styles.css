@@ -1,3 +1,8 @@
 .rpe-table {
     max-width: 700px;
 }
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+    --bs-tooltip-color: var(--bs-light-text-emphasis)
+}
