@@ -16,9 +16,9 @@
 </head>
 
 <body>
-  <header class="p-4 bg-black bg-gradient">
-    <div class="container d-md-flex justify-content-between align-items-end">
-      <a href="#" class="text-decoration-none text-light">
+  <header class="p-4 bg-black bg-gradient text-center">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <a href="index.html" class="text-decoration-none text-light d-inline-block mb-3">
         <div class="d-flex flex-column align-items-center">
           <svg fill="#FFFFFF" height="100px" width="100px" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475.87 475.87" xml:space="preserve" stroke="#FFFFFF"
@@ -39,7 +39,7 @@
       </a>
 
       <nav>
-        <ul class="nav nav-tabs gap-lg-5 justify-content-center">
+        <ul class="nav nav-pills justify-content-center gap-lg-5">
           <li class="nav-item">
             <a class="nav-link link-light" href="index.html">Home</a>
           </li>
@@ -58,64 +58,66 @@
     <div class="container fs-5 fw-light">
         <article>
             <h2 class="fw-light mb-5 text-center">What is RPE?</h2>
-            <p class="text-light">RPE stands for Rate of Perceived Exertion. It is a rating on a 0 - 10 scale of how difficult a set <span class="fst-italic">felt</span>. The easiest way to choose this rating is to think about how many repitions you had left in reserve at the end of your set. After a maximal effort set, you would have 0 reps in reserve (RIR), which would be RPE 10. If it felt as though you had 1 repetition in reserve, the RPE rating would be 9. An RPE of 9.5 means you <span class="fst-italic">may</span> have been able to perform another rep, but it was close to a maximal effort. You can keep working your way down the scale in the same manner using your estimated repetitions in reserve.</p>
-            <p class="my-5 fs-4 text-center">Here is a chart to help visualize this concept.</p>
-            <table class="table table-bordered fs-6 text-center">
-                <thead>
-                    <tr>
-                        <th scope="col">RPE</th>
-                        <th scope="col">RIR</th>
-                        <th scope="col">Difficulty</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-danger">
-                        <th scope="row">10</th>
-                        <th scope="col">0</td>
-                        <td scope="col">Maximal effort, could not have performed another rep.</td>
-                    </tr>
-                    <tr class="table-danger">
-                        <th scope="row">9.5</th>
-                        <th scope="col">0-1</th>
-                        <td scope="col">Near maximal effort, may have been able to perform another rep.</td>
-                    </tr>
-                    <tr class="table-danger">
-                        <th scope="row">9</th>
-                        <th scope="col">1</th>
-                        <td scope="col">Very difficult, but could have performed one more rep.</td>
-                    </tr>
-                    <tr class="table-warning">
-                        <th scope="row">8.5</th>
-                        <th scope="col">1-2</th>
-                        <td scope="col">Difficult, but could do 1 or 2 more reps.</td>
-                    </tr>
-                    <tr class="table-warning">
-                        <th scope="row">8</th>
-                        <th scope="col">2</th>
-                        <td scope="col">Difficult, but could do 2 more reps.</td>
-                    </tr>
-                    <tr class="table-warning">
-                        <th scope="row">7.5</th>
-                        <th scope="col">2-3</th>
-                        <td scope="col">Difficult, but could do 2-3 more reps.</td>
-                    </tr>
-                    <tr class="table-info">
-                        <th scope="row">7</th>
-                        <th scope="col">3</th>
-                        <td scope="col">Sub-maximal, but not easy effort. Could do 3 more reps.</td>
-                    </tr>
-                    <tr class="table-info">
-                        <th scope="row">6.5</th>
-                        <th scope="col">3-4</th>
-                        <td scope="col">Sub-maximal, but not easy effort. Could do 3-4 more reps.</td>
-                    </tr>
-                    <tr class="table-info">
-                        <th scope="row">6</th>
-                        <th scope="col">4</td>
-                        <td scope="col">Slightly challenging, just above warm-up weight. Could do 4 more reps.</td>
-                    </tr>
-                </tbody>
-            </table>
+            <p class="text-light">RPE stands for Rate of Perceived Exertion. It is a rating on a 0 - 10 scale of how difficult a set <span class="fst-italic">felt</span>. The easiest way to choose this rating is to think about how many repitions you had left in reserve at the end of your set. After a maximal effort set, you would have 0 reps in reserve (RIR), which would be RPE 10. If it felt as though you had 1 repetition in reserve, the RPE rating would be 9. An RPE of 9.5 means you <span class="fst-italic">may</span> have been able to perform another rep, but it was close to a maximal effort. You can keep working your way down the scale in the same manner using your estimated repetitions in reserve. The calculator accepts a minimum RPE of 6 because research has shown that trainees can not accurately judge their repetitions in reserve below RPE 6, and there is also no data in that range to use in the calculation.</p>
+            <p class="my-5 fs-4 text-center">Here is a chart to help you understand this concept.</p>
+            <div class="rpe-table mx-auto">
+                <table class="table table-bordered fs-6 text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">RPE</th>
+                            <th scope="col">RIR</th>
+                            <th scope="col">Difficulty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-danger">
+                            <th scope="row">10</th>
+                            <th scope="col">0</td>
+                            <td scope="col">Maximal effort, could not have performed another rep.</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <th scope="row">9.5</th>
+                            <th scope="col">0-1</th>
+                            <td scope="col">Near maximal effort, may have been able to perform another rep.</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <th scope="row">9</th>
+                            <th scope="col">1</th>
+                            <td scope="col">Very difficult, but could have performed one more rep.</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <th scope="row">8.5</th>
+                            <th scope="col">1-2</th>
+                            <td scope="col">Difficult, but could do 1 or 2 more reps.</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <th scope="row">8</th>
+                            <th scope="col">2</th>
+                            <td scope="col">Difficult, but could do 2 more reps.</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <th scope="row">7.5</th>
+                            <th scope="col">2-3</th>
+                            <td scope="col">Difficult, but could do 2-3 more reps.</td>
+                        </tr>
+                        <tr class="table-info">
+                            <th scope="row">7</th>
+                            <th scope="col">3</th>
+                            <td scope="col">Sub-maximal, but not easy effort. Could do 3 more reps.</td>
+                        </tr>
+                        <tr class="table-info">
+                            <th scope="row">6.5</th>
+                            <th scope="col">3-4</th>
+                            <td scope="col">Sub-maximal, but not easy effort. Could do 3-4 more reps.</td>
+                        </tr>
+                        <tr class="table-info">
+                            <th scope="row">6</th>
+                            <th scope="col">4</td>
+                            <td scope="col">Slightly challenging, just above warm-up weight. Could do 4 more reps.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </article>
 
         <article>
