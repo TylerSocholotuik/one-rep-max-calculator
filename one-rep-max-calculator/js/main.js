@@ -102,6 +102,7 @@ const isFormValid = (weightValue, repsValue, rpeValue) => {
 // rows start from RPE 6 and go up to RPE 10 in 0.5 steps
 // cols start from 1 rep and go up to 10 reps
 // values are percentages used in 1RM calculation
+// table data sourced from https://fiftyonestrong.com/rpe/
 const percentageArray = [[86, 84, 81, 79, 76, 74, 71, 68, 65, 63],
                          [88, 85, 82, 80, 77, 75, 72, 69, 67, 64],
                          [89, 86, 84, 81, 79, 76, 74, 71, 68, 65],
@@ -158,7 +159,7 @@ const populateTable = (oneRepMax) => {
             // selecting the <td> element for each index in the weightArray using the unique id's
             tableDataElement = document.getElementById(`rpe-${rpeIndex}-reps-${repsIndex}`);
             // adding the weight at the corresponding indexes to the <td> elements
-            tableDataElement.innerText = weightArray[rpeIndex][repsIndex - 1];
+            tableDataElement.innerText = `${weightArray[rpeIndex][repsIndex - 1]} ${weightUnit}`;
         }
     }
 }

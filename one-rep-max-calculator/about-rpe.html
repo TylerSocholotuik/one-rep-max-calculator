@@ -15,7 +15,7 @@
   <script src="js/main.js" defer></script>
 </head>
 
-<body class="text-center">
+<body>
   <header class="p-4 bg-black bg-gradient">
     <div class="container d-md-flex justify-content-between align-items-end">
       <a href="#" class="text-decoration-none text-light">
@@ -54,7 +54,81 @@
     </div>
   </header>
 
-  <main class="px-3 py-5 bg-gradient">
+  <main class="px-3 py-5 bg-gradient ">
+    <div class="container fs-5 fw-light">
+        <article>
+            <h2 class="fw-light mb-5 text-center">What is RPE?</h2>
+            <p class="text-light">RPE stands for Rate of Perceived Exertion. It is a rating on a 0 - 10 scale of how difficult a set <span class="fst-italic">felt</span>. The easiest way to choose this rating is to think about how many repitions you had left in reserve at the end of your set. After a maximal effort set, you would have 0 reps in reserve (RIR), which would be RPE 10. If it felt as though you had 1 repetition in reserve, the RPE rating would be 9. An RPE of 9.5 means you <span class="fst-italic">may</span> have been able to perform another rep, but it was close to a maximal effort. You can keep working your way down the scale in the same manner using your estimated repetitions in reserve.</p>
+            <p class="my-5 fs-4 text-center">Here is a chart to help visualize this concept.</p>
+            <table class="table table-bordered fs-6 text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">RPE</th>
+                        <th scope="col">RIR</th>
+                        <th scope="col">Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-danger">
+                        <th scope="row">10</th>
+                        <th scope="col">0</td>
+                        <td scope="col">Maximal effort, could not have performed another rep.</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th scope="row">9.5</th>
+                        <th scope="col">0-1</th>
+                        <td scope="col">Near maximal effort, may have been able to perform another rep.</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th scope="row">9</th>
+                        <th scope="col">1</th>
+                        <td scope="col">Very difficult, but could have performed one more rep.</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <th scope="row">8.5</th>
+                        <th scope="col">1-2</th>
+                        <td scope="col">Difficult, but could do 1 or 2 more reps.</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <th scope="row">8</th>
+                        <th scope="col">2</th>
+                        <td scope="col">Difficult, but could do 2 more reps.</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <th scope="row">7.5</th>
+                        <th scope="col">2-3</th>
+                        <td scope="col">Difficult, but could do 2-3 more reps.</td>
+                    </tr>
+                    <tr class="table-info">
+                        <th scope="row">7</th>
+                        <th scope="col">3</th>
+                        <td scope="col">Sub-maximal, but not easy effort. Could do 3 more reps.</td>
+                    </tr>
+                    <tr class="table-info">
+                        <th scope="row">6.5</th>
+                        <th scope="col">3-4</th>
+                        <td scope="col">Sub-maximal, but not easy effort. Could do 3-4 more reps.</td>
+                    </tr>
+                    <tr class="table-info">
+                        <th scope="row">6</th>
+                        <th scope="col">4</td>
+                        <td scope="col">Slightly challenging, just above warm-up weight. Could do 4 more reps.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article>
+            <h2 class="fw-light my-5 text-center">What is the point of RPE?</h2>
+            <p class="text-light">The purpose of RPE in weight training is to help with <span class="fw-normal">auto-regulation</span>. In short, auto-regulation is the adjustment of training variables to account for variations in performance. Let's say you bench pressed 225 lbs for 3 sets of 8 reps last week, and today you plan to add 5 lbs. You only slept for 5 hours, you had a stressful day at work, and you had an argument with your significant other before you left home. Do you think you will be able to bench 230 lbs today? I don't think so.</p>
+
+            <p class="text-light">Here is where auto-regulation comes in. Instead of aiming to add 5 lbs to the bar every week, you set an RPE target for each of your sets. On a stressful day like today, you notice during your warm-up sets that the weight feels a lot heavier than normal. Instead of putting 230 lbs on the bar, you decide that 215 lbs will most likely feel like RPE 8 based on your last warm-up set. You are still getting an effective training stimulus, and you are generating much less fatigue than you would if you failed a set at 230 lbs. This style of training is not great for your ego, but it is much more sustainable in the long-term. You want to be lifting for life, right?</p>
+
+            <p class="fs-6 my-5">Reference: Mansour, H. (2020, September 04). <cite><a href="https://www.barbellmedicine.com/blog/autoregulation-and-rpe-part-i/" target="_blank">What is RPE in Lifting? (Rate of Perceived Exertion Explained)</a>.</cite> Barbell Medicine.</p>
+        </article>
+
+    </div>
+
 
   </main>
 </body>
