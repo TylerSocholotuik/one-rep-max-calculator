@@ -49,6 +49,9 @@ form.addEventListener('reset', (e) => {
     // hiding the unit conversion button when there is no data
     convertBtn.classList.add('d-none');
     unitClickCount = 0;
+    weight.classList.remove('is-invalid');
+    reps.classList.remove('is-invalid');
+    rpe.classList.remove('is-invalid');
 });
 
 
