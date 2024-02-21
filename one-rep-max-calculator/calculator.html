@@ -73,7 +73,8 @@
                     <div class="col col-md-6 mb-3 mb-sm-0">
                         <div class="form-floating">
                             <input type="number" class="form-control" placeholder="Weight" id="weight"
-                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Min: 1 Max: 2000" min="1" max="2000">
+                                data-bs-toggle="tooltip"
+                                data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Min: 1 Max: 2000" min="1" max="2000">
                             <label for="weight" class="form-label">Weight</label>
                             <div class="invalid-feedback" id="weight-feedback">
                                 Weight must be between 1 and 2000.
@@ -95,7 +96,8 @@
                         <div class="col">
                             <div class="form-floating">
                                 <input type="number" class="form-control" placeholder="Reps" id="reps"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Min: 1 Max: 10" min="1" max="10">
+                                    data-bs-toggle="tooltip"
+                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Min: 1 Max: 10" min="1" max="10">
                                 <label for="reps" class="form-label">Reps</label>
                                 <div class="invalid-feedback" id="reps-feedback">
                                     Reps must be between 1 and 10.
@@ -105,8 +107,9 @@
                         <div class="col">
                             <div class="form-floating">
                                 <input type="number" class="form-control" placeholder="RPE" id="rpe"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                                    title="<strong>Rate of Perceived Exertion.</strong> Min: 6 Max: 10. See <a href='about-rpe.html'>About RPE</a> for an explanation of RPE" min="6" max="10">
+                                    data-bs-toggle="tooltip"
+                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" data-bs-html="true"
+                                    title="<strong>Rate of Perceived Exertion.</strong> Min: 6 Max: 10. See <a href='about-rpe.html' class='text-light'>RPE</a> for an explanation of RPE" min="6" max="10">
                                 <label for="reps" class="form-label">RPE</label>
                                 <div class="invalid-feedback" id="rpe-feedback">
                                     RPE must be between 6 and 10.
@@ -136,8 +139,7 @@
                 </p>
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-sm btn-primary d-none" id="convert-btn" data-bs-toggle="tooltip"
-                    data-bs-placement="right" title="Toggles weight unit.">lbs / kg</button>
+                <button type="button" class="btn btn-sm btn-primary d-none" id="convert-btn">lbs / kg</button>
             </div>
         </div>
 
