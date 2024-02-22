@@ -90,10 +90,9 @@ const isWeightValid = (weightValue) => {
     }
 }
 
-/* Functionally identical to isWeightValid, but with a different maximum.
-Max is 10 reps because there is no %1RM data to do the calculation above 10 reps */
+/* Functionally identical to isWeightValid, but with a different maximum and also checks if the value is an integer. Max is 10 reps because there is no %1RM data to do the calculation above 10 reps */
 const isRepsValid = (repsValue) => {
-    if (repsValue > 0 && repsValue <= 10) {
+    if (repsValue > 0 && repsValue <= 10 && Number.isInteger(Number(repsValue))) {
         reps.classList.remove('is-invalid');
         return true;
     } else {
@@ -103,9 +102,9 @@ const isRepsValid = (repsValue) => {
 }
 
 /* Min is 6 and max is 10 because there is no %1RM data below RPE 6,
- and RPE scale goes up to 10. */
+ and RPE scale goes up to 10. Checks to see if value is an increment of 0.5 by checking if rpeValue * 2 is an integer. */
 const isRpeValid = (rpeValue) => {
-    if (rpeValue >= 6 && rpeValue <= 10) {
+    if (rpeValue >= 6 && rpeValue <= 10 && Number.isInteger(Number(rpeValue * 2))) {
         rpe.classList.remove('is-invalid');
         return true;
     } else {

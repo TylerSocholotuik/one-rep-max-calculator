@@ -75,7 +75,7 @@
                             <div class="form-floating">
                                 <input type="number" class="form-control" placeholder="Weight" id="weight"
                                     data-bs-toggle="tooltip"
-                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Min: 1 Max: 2000" min="1" max="2000">
+                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Range: 1 - 2000" min="1" max="2000">
                                 <label for="weight" class="form-label">Weight</label>
                                 <div class="invalid-feedback" id="weight-feedback">
                                     Weight must be between 1 and 2000.
@@ -98,10 +98,10 @@
                             <div class="form-floating">
                                 <input type="number" class="form-control" placeholder="Reps" id="reps"
                                     data-bs-toggle="tooltip"
-                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Min: 1 Max: 10" min="1" max="10">
+                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Range: 1 - 10" min="1" max="10">
                                 <label for="reps" class="form-label">Reps</label>
                                 <div class="invalid-feedback" id="reps-feedback">
-                                    Reps must be between 1 and 10.
+                                    Reps must be a whole number between 1 and 10.
                                 </div>
                             </div>
                         </div>
@@ -110,10 +110,10 @@
                                 <input type="number" class="form-control" placeholder="RPE" id="rpe"
                                     data-bs-toggle="tooltip"
                                     data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-html="true"
-                                    title="<strong>Rate of Perceived Exertion.</strong> Min: 6 Max: 10. See <a href='about-rpe.html' class='text-light'>About RPE</a> for explanation." min="6" max="10">
+                                    title="<strong>Rate of Perceived Exertion.</strong> Range: 6 - 10 in steps of 0.5. See <a href='about-rpe.html' class='text-light'>About RPE</a> for explanation." min="6" max="10" step="0.5">
                                 <label for="reps" class="form-label">RPE</label>
                                 <div class="invalid-feedback" id="rpe-feedback">
-                                    RPE must be between 6 and 10.
+                                    RPE must be between 6 and 10 in steps of 0.5.
                                 </div>
                             </div>
                         </div>
