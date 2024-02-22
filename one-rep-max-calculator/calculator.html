@@ -68,25 +68,26 @@
             <fieldset class="container">
 
                 <div class="row align-items-center">
-                    <div class="col col-md-6 mb-3 mb-sm-0">
-                        <div class="form-floating">
-                            <input type="number" class="form-control" placeholder="Weight" id="weight"
-                                data-bs-toggle="tooltip"
-                                data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Min: 1 Max: 2000" min="1" max="2000">
-                            <label for="weight" class="form-label">Weight</label>
-                            <div class="invalid-feedback" id="weight-feedback">
-                                Weight must be between 1 and 2000.
+                    <div class="row col-sm align-items-center mx-auto">
+                        <div class="col mb-3 mb-sm-0">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" placeholder="Weight" id="weight"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-custom-class="custom-tooltip" data-bs-placement="bottom" title="Min: 1 Max: 2000" min="1" max="2000">
+                                <label for="weight" class="form-label">Weight</label>
+                                <div class="invalid-feedback" id="weight-feedback">
+                                    Weight must be between 1 and 2000.
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-sm-2 col-lg-1 mb-3 mb-sm-0">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="weight-unit" id="unit-lbs" 
-                                checked>
-                            <label class="btn btn-outline-light" for="unit-lbs">lbs</label>
-                            <input type="radio" class="btn-check" name="weight-unit" id="unit-kg">
-                            <label class="btn btn-outline-light" for="unit-kg">kg</label>
+                        <div class="col col-sm-4 col-lg-3 mb-3 mb-sm-0">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="weight-unit" id="unit-lbs"
+                                    checked>
+                                <label class="btn btn-outline-light" for="unit-lbs">lbs</label>
+                                <input type="radio" class="btn-check" name="weight-unit" id="unit-kg">
+                                <label class="btn btn-outline-light" for="unit-kg">kg</label>
+                            </div>
                         </div>
                     </div>
 
