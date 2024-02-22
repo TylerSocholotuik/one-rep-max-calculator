@@ -42,6 +42,19 @@ form.addEventListener('submit', (e) => {
     }
 });
 
+// notifying user if inputs are invalid when inputs lose focus
+weight.addEventListener('focusout', () => {
+    isWeightValid(weight.value);
+})
+
+reps.addEventListener('focusout', () => {
+    isRepsValid(reps.value);
+})
+
+rpe.addEventListener('focusout', () => {
+    isRpeValid(rpe.value);
+})
+
 form.addEventListener('reset', (e) => {
     form.reset();
     oneRepMaxElement.innerText = '';
