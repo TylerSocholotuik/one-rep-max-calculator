@@ -13,58 +13,59 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js" defer></script>
 </head>
 
-<body class="text-center">
-  <header class="p-4 bg-black bg-gradient">
-    <div class="container d-md-flex justify-content-between align-items-center">
-      <a href="#" class="text-decoration-none text-light d-inline-block mb-3">
-        <div class="d-flex flex-column align-items-center">
-          <svg fill="#FFFFFF" height="100px" width="100px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475.87 475.87" xml:space="preserve" stroke="#FFFFFF">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M465.87,226.507h-7.637v-28.495c0-10.203-8.301-18.503-18.503-18.503h-17.513c-2.612-7.054-9.388-12.104-17.339-12.104 h-17.845c-10.202,0-18.503,8.3-18.503,18.503v40.6H107.335v-40.6c0-10.203-8.301-18.503-18.503-18.503H70.986 c-7.951,0-14.726,5.051-17.339,12.104H36.136c-10.202,0-18.503,8.301-18.503,18.503v28.495H10c-5.522,0-10,4.477-10,10 s4.478,10,10,10h7.633v31.351c0,10.203,8.301,18.503,18.503,18.503h17.512c2.612,7.054,9.388,12.105,17.339,12.105h17.846 c10.202,0,18.503-8.3,18.503-18.503v-43.456h261.196v43.456c0,10.203,8.301,18.503,18.503,18.503h17.845 c7.951,0,14.727-5.051,17.339-12.105h17.513c10.202,0,18.503-8.3,18.503-18.503v-31.351h7.637c5.522,0,10-4.477,10-10 S471.393,226.507,465.87,226.507z M37.633,199.509h14.851v76.852H37.633V199.509z M72.483,288.466v-10.608v-79.846v-10.608h14.852 v101.061H72.483z M403.382,288.466h-14.851V187.404h14.851v10.607v79.846V288.466z M423.382,276.361v-76.852h14.852v76.852H423.382z ">
-              </path>
-            </g>
-          </svg>
-          <h1>
-            oneRepMax Calculator
-          </h1>
-        </div>
-        <p class="fs-6 text-secondary">Taking the guesswork out of training</p>
-      </a>
-
-      <nav>
-        <ul class="nav nav-pills nav-fill gap-lg-5">
-          <li class="nav-item">
-            <a class="nav-link link-light active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="calculator.html">Calculator</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="about-rpe.html">RPE</a>
-          </li>
-        </ul>
-      </nav>
+<body class="text-center bg-gradient">
+  <header class="p-4">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-black bg-gradient fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    
+                    <h1 class="mb-0"><span class="fw-light">load</span>Logic</h1>
+                </div>
+                <p class="fs-6 text-secondary mb-0">Taking the guesswork out of training</p>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Pages</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="calculator.html">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="about-rpe.html">About RPE</a>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
     </div>
-  </header>
+</header>
 
-  <main class="px-3 py-5 bg-gradient">
+  <main class="px-3 py-5">
     <section class="container fw-light fs-5">
-      <h2 class="fw-light mb-5">Welcome to <span class="fw-bold">oneRepMax</span> Calculator!</h2>
+      <h2 class="fw-light mb-5">Welcome to load<span class="fw-bold">Logic</span> one-rep max and RPE load calculator!</h2>
 
       <div class="row gx-5 text-light text-start">
         <div class="col-lg">
           <p>Some strength programs call for sets based on a percentage of your one-rep max, but what if you don't know your one-rep max?</p>
         </div>
         <div class="col-lg">
-          <p>You could test your true one-rep max and generate a great deal of fatigue, or you could simply estimate your one-rep max using <span class="fw-bold">oneRepMax</span> Calculator!</p>
+          <p>You could test your true one-rep max and generate a great deal of fatigue, or you could simply estimate your one-rep max using the load<span class="fw-bold">Logic</span> calculator!</p>
         </div>
         </div>
 
@@ -113,11 +114,11 @@
   <footer class="p-4 bg-black bg-gradient">
     <div class="container row align-items-center mx-auto">
       <div class="col-md">
-        <a href="#" class="text-decoration-none text-light d-inline-block mb-3">
+        <a href="index.html" class="text-decoration-none text-light d-inline-block mb-3">
           <div class="d-flex flex-column align-items-center">
-            <img src="img/barbell.svg" alt="barbell logo" class="img-fluid">
-            <p class="fs-3 mb-0">
-              oneRepMax Calculator
+            
+            <p class="fs-1 fw-light mb-0">
+              load<span class="fw-bold">Logic</span>
             </p>
           </div>
           <p class="text-secondary">Taking the guesswork out of training</p>
@@ -125,12 +126,14 @@
         </a>
       </div>
         <div class="col-md">
-          <p class="fs-4 text-light mb-0">Contact</p>
-          <p class="mb-3"><i class="bi bi-envelope"></i> <a href="mailto:socholotuikt@gmail.com">socholotuikt@gmail.com</a></p>
-          <a href="https://github.com/TylerSocholotuik/one-rep-max-calculator" class="text-light" target="_blank">
-            <i class="bi bi-github fs-1"></i>
-            <p>View my GitHub repository for this project.<p>
-          </a>
+          <p class="fs-4 text-light">Contact</p>
+          <p class="mb-3"><i class="bi bi-envelope"></i> <a href="mailto:socholotuikt@gmail.com" class="text-light">socholotuikt@gmail.com</a></p>
+          <p>
+              <a href="https://github.com/TylerSocholotuik/one-rep-max-calculator" class="text-light" target="_blank">
+                <i class="bi bi-github fs-4 pe-2"></i>
+                View project on GitHub.
+              </a>
+          </p>
         </div>
     </div>
   </footer>
