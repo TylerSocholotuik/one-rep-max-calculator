@@ -45,15 +45,15 @@ calculatorForm.addEventListener('submit', (e) => {
 // notifying user if inputs are invalid when inputs lose focus
 weight.addEventListener('focusout', () => {
     isWeightValid(weight.value);
-})
+});
 
 reps.addEventListener('focusout', () => {
     isRepsValid(reps.value);
-})
+});
 
 rpe.addEventListener('focusout', () => {
     isRpeValid(rpe.value);
-})
+});
 
 calculatorForm.addEventListener('reset', (e) => {
     calculatorForm.reset();
@@ -126,12 +126,11 @@ const isFormValid = (weightValue, repsValue, rpeValue) => {
 
 /* This array contains percentage of one-rep max data needed
  to calculate the weight the user can lift at different RPE and
- rep targets */
-// rows start from RPE 6 and go up to RPE 10 in 0.5 steps
-// cols start from 1 rep and go up to 10 reps
-// eg. percentageArray[0][0] represents RPE 6 for 1 rep which is 
-// 86% of 1-rep max
-// table data sourced from https://fiftyonestrong.com/rpe/
+ rep targets 
+    rows start from RPE 6 and go up to RPE 10 in 0.5 steps
+    cols start from 1 rep and go up to 10 reps
+    eg. percentageArray[0][0] represents RPE 6 for 1 rep which is 86% of 1-rep max
+    table data sourced from https://fiftyonestrong.com/rpe/ */
 const percentageArray = [[86, 84, 81, 79, 76, 74, 71, 68, 65, 63],
                          [88, 85, 82, 80, 77, 75, 72, 69, 67, 64],
                          [89, 86, 84, 81, 79, 76, 74, 71, 68, 65],
