@@ -1,6 +1,6 @@
 # One Rep Max Calculator Portfolio Project
 
-![Calculator page screenshot](./screenshots/calculator-page-md.png)
+![Calculator page screenshot](./screenshots/calculator-page-zoomout.png)
 
  [View the deployed website](https://65d7efbf7551276fb0911444--loadlogic.netlify.app/)
 
@@ -21,7 +21,7 @@ If you are unfamiliar with the concept of RPE, I wrote a short article on the Ab
 - Responsive web design
 - JavaScript event handling
 - JavaScript form validation
-- Fundamental programming concepts (loops, arrays, arithmetic, decisions)
+- Fundamental programming skills (arithmetic, decisions, loops, arrays)
 
 ## How to test the calculator
 
@@ -53,7 +53,12 @@ Please let me know if you notice any bugs/issues during your testing. <socholotu
 
 3. I had not used Bootstrap or any other CSS libraries prior to this project, so I spent a lot of time reading the documentation to understand the behaviour of the classes. I wanted this website to look modern and professional, so the use of a library was necessary for some components that are above my current skill level (sidebar nav, tooltips, floating form labels). The ability to self-learn and read documentation is an essential skill for software developers, so I was happy to go through this process.
 
-4. I am not an artist or a designer, so creating an aesthetically pleasing website was a challenge for me. A lot of trial and error was involved in creating the layouts for each window size. 
+4. I am not an artist or a designer, so creating an aesthetically pleasing website was a challenge for me. A lot of trial and error was involved in creating the layouts for each window size.
+
+## To-Do List
+
+- Create logo and favicon
+- Create link preview image with logo
 
 ## Future goals for this project
 
@@ -61,4 +66,4 @@ After I learn about server-side scripting and connecting to databases, I would l
 
 ## Closing Message
 
-Thank you for taking the time to review my project. Although a one-rep max calculator is not a useful application for the majority of people, I feel that it is an excellent demonstration of my current programming skills and self-motivation. 
+Thank you for taking the time to review my project. Although a one-rep max calculator is only useful for strength athletes, I feel that it is an excellent demonstration of my current programming skills and self-motivation.
