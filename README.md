@@ -16,7 +16,7 @@ If you are unfamiliar with the concept of RPE, I wrote a short article on the Ab
 - CSS (Bootstrap)
 - Javascript
 
-## Skills demonstrated
+## Skills Demonstrated
 
 - Responsive web design
 - JavaScript event handling
@@ -45,7 +45,7 @@ In addition to the calculator function, you can test the responsive layout chang
 
 Please let me know if you notice any bugs/issues during your testing. <socholotuikt@gmail.com>.
 
-## Challenges I Faced In This Project
+## Challenges I faced In this project
 
 1. Calculating the one-rep max was not as straight-forward as you might assume. The formula is simple ((Weight * 100) / %1RM), but the % of 1-rep max variable is unique to **every** rep and RPE combination, so this necessitated the use of a 2D jagged array to store the percentage values for each RPE and Rep pair. To calculate the table values, I had to traverse this array and calculate the weight estimate for each rep and RPE pair in each iteration of the loop. The result had to be stored in a second parallel 2D jagged array. This array was then used to populate the table by selecting \<td> elements with id's containing the indexes of each rep and RPE value. This was my first time working with 2D arrays, and it exercised my critical-thinking and problem solving skills.
 
@@ -55,7 +55,7 @@ Please let me know if you notice any bugs/issues during your testing. <socholotu
 
 4. I am not an artist or a designer, so creating an aesthetically pleasing website was a challenge for me. A lot of trial and error was involved in creating the layouts for each window size. 
 
-## Future Goals For This Project
+## Future goals for this project
 
 After I learn about server-side scripting and connecting to databases, I would like to turn this into a training log app that allows users to create custom workout templates, log their workout data (exercise, weight, sets, reps, RPE), recall past workouts, and view progress analysis charts. 
 
