@@ -23,6 +23,10 @@ If you are unfamiliar with the concept of RPE, I wrote a short article on the Ab
 - JavaScript form validation
 - Fundamental programming skills (arithmetic, decisions, loops, arrays)
 
+## Known Bugs/Issues
+
+- When you press the RPE info icon on a mobile device with a touchscreen, the tooltip does not disappear and is displayed on top of the modal. You can tap anywhere to hide it, but it is a minor annoyance. This is not an issue when using a mouse because the tooltip is only triggered by hovering.
+
 ## How to test the calculator
 
 If you are not interested in resistance training, you might not know what values to enter in the calculator inputs. Here are some test runs you can try:
