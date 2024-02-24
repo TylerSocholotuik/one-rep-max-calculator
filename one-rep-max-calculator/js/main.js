@@ -223,15 +223,11 @@ function toggleUnitConversion() {
     // on first and odd numbered clicks, apply the conversion rate, on even numbered clicks, go back to the original weight unit
     if (unitClickCount % 2 !== 0) {
         oneRepMax = Math.round(calculateOneRepMax(weight.value * conversion, reps.value, rpe.value));
-        oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
-        populateTable(oneRepMax);
-        console.log(oneRepMax)
-        console.log(conversion);
     } else {
-        oneRepMax = Math.round(calculateOneRepMax(weight.value, reps.value, rpe.value));
-        oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
-        populateTable(oneRepMax);
+        oneRepMax = Math.round(calculateOneRepMax(weight.value, reps.value, rpe.value));   
     }
+    oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
+    populateTable(oneRepMax);
 }
 
 
