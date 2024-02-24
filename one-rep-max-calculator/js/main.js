@@ -27,16 +27,11 @@ calculatorForm.addEventListener('submit', (e) => {
 
     if (isFormValid(weight.value, reps.value, rpe.value)) {
         oneRepMax = calculateOneRepMax(weight.value, reps.value, rpe.value);
-
         weightUnit = lbsBtn.checked ? 'lbs' : 'kg';
-        
         oneRepMaxElement.innerText = `${oneRepMax} ${weightUnit} `;
-
         populateTable(oneRepMax);
-
         // showing the unit conversion button when there is data
         convertBtn.classList.remove('d-none');
-
         // resetting the click count of the unit conversion button
         unitClickCount = 0;
     }
@@ -66,8 +61,6 @@ calculatorForm.addEventListener('reset', (e) => {
     reps.classList.remove('is-invalid');
     rpe.classList.remove('is-invalid');
 });
-
-
 
 convertBtn.addEventListener('click', toggleUnitConversion);
 
@@ -150,7 +143,7 @@ const calculateOneRepMax = (weight, reps, rpe) => {
     // (2 * rpe) - 12 will return the corresponding index in percentage array
     // e.g. (2 * 6) - 12 = 0
     // reps - 1 because reps start at 1
-    let oneRepMax = (weight * 100) / percentageArray[(2 * rpe) -12][reps - 1];
+    let oneRepMax = (weight * 100) / percentageArray[(2 * rpe) - 12][reps - 1];
     return Math.round(oneRepMax);
 }
 
