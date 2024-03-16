@@ -10,7 +10,7 @@ const oneRepMaxElement = document.getElementById('one-rep-max');
 const convertBtn = document.getElementById('convert-btn');
 let oneRepMax;
 let weightUnit;
-let unitClickCount = 0;
+let doConversion = false;
 
 // enabling bootstrap tooltips
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -32,8 +32,8 @@ calculatorForm.addEventListener('submit', (e) => {
         populateTable(oneRepMax);
         // showing the unit conversion button when there is data
         convertBtn.classList.remove('d-none');
-        // resetting the click count of the unit conversion button
-        unitClickCount = 0;
+        // resetting the boolean that controls unit conversion toggle
+        doConversion = false;
     }
 });
 
@@ -56,7 +56,7 @@ calculatorForm.addEventListener('reset', (e) => {
     clearTable();
     // hiding the unit conversion button when there is no data
     convertBtn.classList.add('d-none');
-    unitClickCount = 0;
+    doConversion = false;
     weight.classList.remove('is-invalid');
     reps.classList.remove('is-invalid');
     rpe.classList.remove('is-invalid');
@@ -204,17 +204,17 @@ const clearTable = () => {
     }
 }
 
-/* This function is used to toggle the weight unit from lbs-kg or kg-lbs depending on the current weight unit. Each time this function is called (from the convertBtn click event listener) the unitClickCount is incremented and is used in an even/odd check to decide which value to use in the 1-rep max calculation. The conversion rate and the weight unit are toggled every time the function is called. If the click count is odd (first click, count is initialized to 0), the value of the weight input and the conversion rate are used in the 1-rep max calculation. On even clicks, the weight value is used without the conversion rate to go back to the original value. */
+/* This function is used to toggle the weight unit from lbs-kg or kg-lbs depending on the current weight unit. Each time this function is called (from the convertBtn click event listener) the doConversion boolean is toggled and is used to decide which conversion rate to use in the 1-rep max calculation. The conversion rate and the weight unit are toggled every time the function is called. If doConversion is true (first click, doConversion initialized to false), the value of the weight input and the conversion rate are used in the 1-rep max calculation. On the next click, the weight value is used without the conversion rate to go back to the original value. */
 function toggleUnitConversion() {
-    // tracking the number of times the button has been clicked to create a toggle function. This gets reset when new values are submitted or the form is cleared.
-    unitClickCount++;
+    // toggling unit conversion boolean
+    doConversion = !doConversion;
     // toggling the conversion rate based on the current weight unit
     let conversion = weightUnit === 'lbs' ? 0.453592 : 2.20462; 
     // toggling the weight unit
     weightUnit = weightUnit === 'lbs' ? 'kg' : 'lbs';
     // recalculating oneRepMax with conversion rate, then outputting new value and re-populating table with converted values
     // on first and odd numbered clicks, apply the conversion rate, on even numbered clicks, go back to the original weight unit
-    if (unitClickCount % 2 !== 0) {
+    if (doConversion) {
         oneRepMax = Math.round(calculateOneRepMax(weight.value * conversion, reps.value, rpe.value));
     } else {
         oneRepMax = Math.round(calculateOneRepMax(weight.value, reps.value, rpe.value));   
