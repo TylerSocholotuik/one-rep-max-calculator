@@ -150,16 +150,9 @@ const calculateOneRepMax = (weight, reps, rpe) => {
 /* This function accepts a 1-rep max as a parameter, and uses it to calculate
  the estimated weight a user can lift at RPE 6-10 for 1-10 reps (by manipulating the calculate 1-rep max formula). These values are stored in weightArray which is parallel to percentageArray. The values are stored by iterating through the percentage array and calculating the weight for each RPE and reps index, then storing that result at the same indexes in the weightArray. This function returns the weightArray. */
 const calculateWeightUsingOneRepMax = (oneRepMax) => {
-    // had to initialize the weightArray to be the same size as percentageArray
-    let weightArray =  [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
+    // initializing weight array to same size as percentage array, filled with 0's.
+    let weightArray = Array(9).fill((Array(10).fill(0)));
+
     let weight;
 
     percentageArray.forEach((rpe, rpeIndex) => {
